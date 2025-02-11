@@ -1,0 +1,248 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Carrossel de Imagens Responsivo */
+.carousel {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-50%); }
+    66% { transform: translateX(-60%); }
+    100% { transform: translateX(0); }
+}
+
+/* Texto personalizado */
+.love-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
+
+.message {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 10px auto;
+}
+
+.love-note {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 120px;
+}
+    
+            #play {
+                background-color: #3a3939;
+                color: white;
+            }
+    
+            #pause {
+                background-color: #3a3939;
+                color: whitesmoke;
+            }
+
+
+
+/* Contador de Data e Tempo */
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+.countdown-block {
+    background: linear-gradient(to bottom, #222, #111);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    min-width: 80px;
+    height: 100px;
+}
+
+.countdown-block span {
+    font-size: 28px;
+}
+
+.countdown-block small {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .countdown-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .countdown-block {
+        font-size: 20px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .countdown-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .countdown-block {
+        width: 100%;
+        min-width: unset;
+        height: 80px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    .love-text {
+        font-size: 18px;
+    }
+}
+
+/* Animação dos Corações Flutuantes */
+#floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(1); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;  /* Impede rolagem lateral */
+    overflow-y: auto;    /* Ativa rolagem vertical */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkred;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Outros estilos continuam iguais... */
+
