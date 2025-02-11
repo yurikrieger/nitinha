@@ -22,6 +22,7 @@ body {
 
 /* Contêiner principal */
 .container {
+    margin-top: 300px;
     max-width: 400px;
     width: 90%;
     display: flex;
